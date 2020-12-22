@@ -171,7 +171,6 @@ RCT_EXPORT_METHOD(startLocalVideo) {
       return;
   }
   self.localVideoTrack = [TVILocalVideoTrack trackWithSource:self.camera enabled:YES name:@"camera"];
-  [self startCameraCapture];
 }
 
 - (void)startCameraCapture {
