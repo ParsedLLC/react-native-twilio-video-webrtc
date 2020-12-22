@@ -6,10 +6,14 @@
  */
 
 import { requireNativeComponent, View } from 'react-native'
+import PropTypes from 'prop-types'
 import React from 'react'
 
 const propTypes = {
-  ...View.propTypes
+  ...View.propTypes,
+  // Whether to apply Z ordering to this view.  Setting this to true will cause
+  // this view to appear above other Twilio Video views.
+  applyZOrder: PropTypes.bool
 }
 
 class TwilioVideoPreview extends React.Component {
